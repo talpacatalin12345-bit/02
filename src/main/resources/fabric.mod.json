@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "autodisconnect",
+  "version": "1.0.0",
+  "name": "Auto Disconnect",
+  "description": "Автоматически отключает от сервера при приближении посторонних игроков.",
+  "authors": ["You"],
+  "contact": {},
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.example.autodisconnect.AutoDisconnectMod"
+    ],
+    "modmenu": [
+      "com.example.autodisconnect.integration.ModMenuIntegration"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "minecraft": "1.16.5"
+  }
+}
