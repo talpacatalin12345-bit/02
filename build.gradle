@@ -1,15 +1,15 @@
 buildscript {
     repositories {
-        maven {
-            url "https://maven.fabricmc.net/"
-        }
+        maven { url "https://maven.fabricmc.net/" }
         mavenCentral()
     }
+    dependencies {
+        classpath 'net.fabricmc:fabric-loom:0.6-SNAPSHOT'
+    }
 }
-plugins {
-    id 'fabric-loom' version '0.6-SNAPSHOT'
-    id 'maven-publish'
-}
+
+apply plugin: 'fabric-loom'
+apply plugin: 'maven-publish'
 
 sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
@@ -21,6 +21,7 @@ group = "com.example"
 repositories {
     maven { url "https://maven.shedaniel.me/" }
     maven { url "https://maven.terraformersmc.com/releases/" }
+    mavenCentral()
 }
 
 dependencies {
